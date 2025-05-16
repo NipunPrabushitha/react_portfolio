@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import {AnimatePresence, motion} from "framer-motion";
 
 const ContactPage = () => {
     const socialLinks = [
@@ -25,6 +25,7 @@ const ContactPage = () => {
     };
 
     return (
+        <AnimatePresence>
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900 overflow-x-hidden">
             {/* Hero Section */}
             <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-black to-gray-800 text-white overflow-hidden">
@@ -267,6 +268,7 @@ const ContactPage = () => {
                 </motion.div>
             </section>
         </div>
+        </AnimatePresence>
     );
 };
 

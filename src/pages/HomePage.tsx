@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import {AnimatePresence, motion} from "framer-motion";
 
 // Animation variants
 const container = {
@@ -26,6 +26,7 @@ const HomePage = () => {
     ];
 
     return (
+        <AnimatePresence>
         <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 overflow-x-hidden">
             {/* Hero Section */}
             <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-black to-gray-800 text-white overflow-hidden">
@@ -288,6 +289,7 @@ const HomePage = () => {
                 </div>
             </section>
         </div>
+        </AnimatePresence>
     );
 };
 

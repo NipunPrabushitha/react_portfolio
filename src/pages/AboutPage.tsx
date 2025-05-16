@@ -35,7 +35,7 @@ const AboutPage = () => {
     }, [location.pathname]);
 
     return (
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
             <motion.div
                 key={location.pathname}
                 initial={{ opacity: 0 }}
