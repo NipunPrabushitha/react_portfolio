@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import PageLoader from "../components/PageLoader.tsx";
 
 // Animation variants
 const container = {
@@ -35,6 +36,7 @@ const AboutPage = () => {
     }, [location.pathname]);
 
     return (
+        <PageLoader>
         <AnimatePresence>
             <motion.div
                 key={location.pathname}
@@ -289,6 +291,7 @@ const AboutPage = () => {
                 </section>
             </motion.div>
         </AnimatePresence>
+        </PageLoader>
     );
 };
 

@@ -1,4 +1,5 @@
 import {AnimatePresence, motion} from "framer-motion";
+import PageLoader from "../components/PageLoader.tsx";
 
 const ContactPage = () => {
     const socialLinks = [
@@ -25,6 +26,7 @@ const ContactPage = () => {
     };
 
     return (
+        <PageLoader>
         <AnimatePresence>
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900 overflow-x-hidden">
             {/* Hero Section */}
@@ -269,6 +271,7 @@ const ContactPage = () => {
             </section>
         </div>
         </AnimatePresence>
+        </PageLoader>
     );
 };
 
